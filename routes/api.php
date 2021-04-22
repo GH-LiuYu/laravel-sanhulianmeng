@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/user/login', function () {
+    return '3333';
+});
+
+
+Route::post('/nav/add',[\App\Http\Controllers\NavController::class,'add']);
+
