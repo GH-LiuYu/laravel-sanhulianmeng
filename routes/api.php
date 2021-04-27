@@ -23,5 +23,10 @@ Route::post('/user/login', function () {
 });
 
 
-Route::post('/nav/add',[\App\Http\Controllers\NavController::class,'add']);
+Route::post('/nav/navs',[\App\Http\Controllers\NavController::class,'addNav']);//新增
+Route::post('/nav/nav',[\App\Http\Controllers\NavController::class,'postNav']);//编辑保存
+Route::get('/nav/navs',[\App\Http\Controllers\NavController::class,'getNavs']);//列表/打开编辑
+Route::delete('/nav/navs',[\App\Http\Controllers\NavController::class,'deleteNav']);//删除
+
+Route::get('/code/list',[\App\Http\Controllers\CodeListController::class,'getLists']);//列表/打开编辑
 

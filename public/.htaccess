@@ -1,7 +1,7 @@
 <IfModule mod_rewrite.c>
     Header always set Access-Control-Allow-Origin "*"
     Header always set Access-Control-Allow-Headers: "X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token, Accept-Encoding"
-    Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS"
+    Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS,PUT,DELETE"
     RewriteEngine On
     RewriteCond %{REQUEST_METHOD} OPTIONS
     RewriteRule ^(.*)$ $1 [R=200,L]
